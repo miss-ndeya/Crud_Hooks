@@ -24,7 +24,7 @@ const Crud = () => {
   useEffect(() => {
     const { utilisateurs } = state;
     localStorage.setItem("utilisateurs", JSON.stringify(utilisateurs));
-  }, [state.utilisateurs]);
+  }, [state]);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -69,26 +69,7 @@ const Crud = () => {
 
   const deleteUtilisateur = (id) => {
     const { modifierId, utilisateurs } = state;
-    if (modifierId === id) {
-      setState({
-        ...state,
-        utilisateurs: utilisateurs.filter(
-          (utilisateur) => utilisateur.id !== id
-        ),
-        modifierId: false,
-        prenom: "",
-        nom: "",
-        email: "",
-        telephone: "",
-      });
-    } else {
-      setState({
-        ...state,
-        utilisateurs: utilisateurs.filter(
-          (utilisateur) => utilisateur.id !== id
-        ),
-      });
-    }
+    DeleteUtilisateur(id, modifierId, utilisateurs, setState, state);
   };
 
   return (
