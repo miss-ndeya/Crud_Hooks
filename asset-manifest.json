@@ -1,0 +1,12 @@
+{
+  "files": {
+    "main.css": "/Crud_Hooks/static/css/main.31d6cfe0.css",
+    "main.js": "/Crud_Hooks/static/js/main.42c552d0.js",
+    "index.html": "/Crud_Hooks/index.html",
+    "main.42c552d0.js.map": "/Crud_Hooks/static/js/main.42c552d0.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.31d6cfe0.css",
+    "static/js/main.42c552d0.js"
+  ]
+}
